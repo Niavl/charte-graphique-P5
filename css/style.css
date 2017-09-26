@@ -10,20 +10,22 @@
 
 html, body{
     width: 100%;
+    height: 100%;
 }
 
 /* ====================================
     Common / Typography
     =============================================*/
 h1{
-	text-transform: uppercase;
     font-size: 1.3em;
     margin-top: 20px;
+}
 
+h2{
+    font-size: 1.3rem;
 }
 
 h1.slogan{
-	text-transform: none;
     text-align: center;
     font-size: 32px;
 }
@@ -128,11 +130,23 @@ a.orange:hover{
     color: #DD2C00;
 }
 
+a.bleen{
+    color: #009688 !important;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+a.bleen:hover{
+    color: #00675B !important;
+}
+
 /* ====================================
     Heading
     =============================================*/
 header{
-    height: 100%;
     width: 100%;
     background-size: cover;
     -webkit-box-shadow : 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
@@ -180,7 +194,7 @@ header.bg9{
 }
 
 header.full-height{
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 header section{
@@ -190,8 +204,17 @@ header section{
 header section img{
     width: 50%;
     height: auto;
-    /*margin-top: 10%;*/
+    margin-top: 5%;
 }
+
+header section h1{
+    margin-top: 40px;
+}
+
+header #control{
+    margin-top: 40px;
+}
+
 header #control > li{
     display: inline-block;
 }
@@ -233,12 +256,6 @@ nav ul a.btn{
     margin: 0 0 0 20px;
     font-size: 0.8em;
     padding: 0 15px 0 15px;
-}
-
-nav .nav-content .nav-title{
-    width: 100%;
-    text-align: center;
-    padding: 0;
 }
 
 nav .static-menu{
@@ -432,95 +449,119 @@ footer ul.social > li:not(:first-child){
     margin-left: 35px;
 }
 
-#stay-connect{
-    padding-left: 30px;
+/* ====================================
+    Cards (tile)
+    =============================================*/
+.card{
+    min-height: 189px;
+}
+
+.card .card-content {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.card .card-content p.infos {
+    font-size: 0.85em;
+    color: #b7b7b7;
+}
+
+.card .card-title{
+    font-size: 24px;
+}
+
+.card .card-action{
+    padding: 0 10px 10px 10px;
+    border-top: none;
+}
+
+.card .card-action > a{
+    font-weight: 800;
 }
 
 /* ====================================
-    blog
+    Progress
     =============================================*/
-
 
 /* ====================================
     Responsive
     =============================================*/
 
+/**
+    Desktop screen
+ */
 @media only screen and (min-width: 993px){
     nav a.button-collapse{
         display: block;
     }
-}
-
-@media only screen and (max-width: 992px) and (orientation : landscape){
-    header section img{
-        margin-top: 15%;
-        width: 80%;
+    #stay-connect {
+        padding-left: 30px;
     }
 }
 
-/* Desktops and laptops */
-@media only screen and (min-width : 1366px){
-    header section img{
-        margin-top: 5%;
+/**
+    Medium screen
+ */
+@media all and (min-width: 601px) and (max-width: 992px)
+{
+    .no-pad-bot{
+        margin-bottom: 10px !important;
     }
-}
 
-/* iPads (landscape) */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape){
-    header section img{
-        margin-top: 8%;
-        width: 80%;
+    #stay-connect form{
+        padding-left: 30px;
     }
-}
 
-/* iPads (portrait) */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait){
     header section img{
-        margin-top: 25%;
-        width: 80%;
+        width: 90%;
     }
-}
 
-/* Phone (portrait) and small screen resolution */
-@media only screen
-and (max-width: 601px) {
     h1.slogan{
         font-size: 24px;
         line-height: 30px;
     }
+}
+
+/**
+    Phone and small screen
+ */
+@media all and (max-width: 600px){
+    .no-pad-bot{
+        margin-bottom: 10px !important;
+    }
+
+    #stay-connect form{
+        padding-left: 30px;
+    }
+
     header section img{
-        margin-top: 10%;
         width: 90%;
     }
-    header #control > li{
-        margin: 0 0 20px 0;
-        left: 0;
+
+    h1.slogan{
+        font-size: 24px;
+        line-height: 30px;
     }
+
     header #control li:first-child{
-        margin-right: 0;
+        margin: 0 0 20px 0;
     }
 }
 
 /*
   Phone (Landscape)
   */
-@media only screen
-and (max-width: 767px)
-and (orientation: landscape) {
-    h1.slogan{
-        font-size: 24px;
-        line-height: 30px;
-        margin: 0;
+@media only screen and (min-width: 418px) and (max-width: 767px) and (orientation: landscape) {
+    header section h1{
+        margin: 5px 0 0 0;
     }
+    header #control{
+        margin-top: 5px;
+    }
+
     header section img{
         margin-top: 0;
-        width: 48%;
+        width: 50%;
     }
     header .btn.full{
         width: 250px;
@@ -529,29 +570,3 @@ and (orientation: landscape) {
         font-size: 11px;
     }
 }
-
-/*
-  Phone low resolution (Landscape)
-  */
-/*
-@media only screen
-and (max-device-width: 600px)
-and (orientation: landscape) {
-    h1.slogan{
-        font-size: 24px;
-        line-height: 30px;
-        margin: 0;
-    }
-    header section img{
-        width: 90%;
-    }
-}
-
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape) {
-    header section img{
-        width: 40%;
-    }
-}*/
