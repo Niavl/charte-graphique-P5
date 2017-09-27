@@ -10,19 +10,22 @@
 
 html, body{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    background: rgba(0, 150, 136,0.07);
 }
 
 /* ====================================
     Common / Typography
     =============================================*/
 h1{
-    font-size: 1.3em;
+    font-size: 20pt;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 h2{
-    font-size: 1.3rem;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 h1.slogan{
@@ -44,7 +47,7 @@ img{
     margin-bottom: 0 !important;
 }
 
-main section{
+.marge-top{
     margin-top: 40px;
 }
 
@@ -147,6 +150,7 @@ a.bleen:hover{
     Heading
     =============================================*/
 header{
+    min-height: 40%;
     width: 100%;
     background-size: cover;
     -webkit-box-shadow : 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
@@ -159,12 +163,10 @@ header.bg1{
 
 header.bg2{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg2.jpg') center/cover no-repeat;
-
 }
 
 header.bg2-blur{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg2-blur.jpg') center/cover no-repeat;
-    background-attachment: fixed;
 }
 
 header.bg3{
@@ -195,8 +197,24 @@ header.bg9{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg9.jpg') center/cover no-repeat;
 }
 
+header.bg10{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg10.jpeg') center/cover no-repeat;
+}
+
+header.bg11{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg11.jpg') center/cover no-repeat;
+}
+
+header.bg12{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg12.jpg') center/cover no-repeat;
+}
+
+header.bg13{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg13.jpg') center/cover no-repeat;
+}
+
 header.full-height{
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 header section{
@@ -225,6 +243,20 @@ header #control li:first-child{
     margin-right: 20px;
 }
 
+header #header-main-title{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+header #header-main-title h1{
+    font-size: 30pt;
+    text-transform: uppercase;
+}
+
+header #header-main-title h2{
+    font-size: 24pt;
+}
+
 .sticky{
     background : #009688;
     position: fixed;
@@ -234,20 +266,31 @@ header #control li:first-child{
     -o-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+}
+
+header.collapse{
+
 }
 
 /* ====================================
     Navigation
     =============================================*/
+
 nav{
     background: none;
     box-shadow: none;
     -webkit-box-shadow : none;
     width: 100%;
+    z-index: 999;
 }
 
-nav a.brand-logo{
-    margin-left: 10px;
+#nav-logo{
+    margin-top: 5px;
+    background: url('../images/logo/small-logo.png') center no-repeat;
+    width: 90px;
+    height: 52px;
 }
 
 nav ul > li a{
@@ -274,19 +317,13 @@ nav .static-menu li a:hover{
     color : rgba(255, 255, 255, 0.85);
 }
 
-#nav-title{
+nav #nav-small-title{
     display: none;
-}
-
-nav.nav-extended.sticky{
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
 }
 
 /* ====================================
     Dropdown
     =============================================*/
-
 .dropdown-content li>a, .dropdown-content li>span{
     display: inline-block;
 }
@@ -456,11 +493,16 @@ footer ul.social > li:not(:first-child){
     margin-left: 35px;
 }
 
+#stay-connect form .input-field:nth-child(2){
+    text-align: right;
+}
+
 /* ====================================
     Cards (tile)
     =============================================*/
 .card{
     min-height: 189px;
+    z-index: 0;
 }
 
 .card .card-content {
@@ -487,8 +529,78 @@ footer ul.social > li:not(:first-child){
 }
 
 /* ====================================
-    Progress
+    Stepbar
     =============================================*/
+#stepbar > li{
+    list-style-type: none;
+    float: left;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    color: #b7b7b7;
+}
+
+#stepbar li:first-child:before {
+    content: "\f6cf";
+}
+#stepbar li:nth-child(2):before {
+    content: "\f100";
+}
+#stepbar li:nth-child(3):before {
+    content: "\f497";
+}
+#stepbar li:last-child:before {
+    content: "\f135";
+}
+
+#stepbar li:before{
+    font-family: 'Material Design Icons';
+    font-size: 45px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border: 1px solid #009688;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: #009688;
+    color: #ffffff;
+    z-index: 1;
+}
+#stepbar li:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #009688;
+    top: 40px;
+    left: -50%;
+    z-index: -1;
+}
+
+#stepbar li:first-child:after{
+    content: none;
+}
+/* ====================================
+    Page heading / breadcrumb
+    =============================================*/
+.page-heading{
+    position: relative;
+    top: -20px;
+}
+a.breadcrumb{
+    color: #009688;
+    font-size: 12px;
+}
+.breadcrumb:last-child{
+    color: rgba(0,0,0,0.54) !important;
+}
+.breadcrumb:before{
+    color: rgba(0,0,0,0.54) !important;
+    font-size: 12px;
+    margin: 2px;
+}
 
 /* ====================================
     Responsive
@@ -527,6 +639,10 @@ footer ul.social > li:not(:first-child){
         font-size: 24px;
         line-height: 30px;
     }
+
+    header #nav-logo{
+        left: 60px;
+    }
 }
 
 /**
@@ -535,10 +651,6 @@ footer ul.social > li:not(:first-child){
 @media all and (max-width: 600px){
     .no-pad-bot{
         margin-bottom: 10px !important;
-    }
-
-    #stay-connect form{
-        padding-left: 30px;
     }
 
     header section img{
@@ -552,6 +664,35 @@ footer ul.social > li:not(:first-child){
 
     header #control li:first-child{
         margin: 0 0 20px 0;
+    }
+
+    #stepbar > li{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #stepbar > li:after{
+        content: none;
+    }
+
+    #stay-connect form .input-field:nth-child(2){
+        text-align: center;
+    }
+
+    footer ul.social{
+        text-align: center;
+    }
+
+    header #header-main-title h1{
+        font-size: 20pt;
+    }
+
+    header #header-main-title h2{
+        font-size: 16pt;
+    }
+
+    header #nav-logo{
+        left: 100px;
     }
 }
 
@@ -575,5 +716,8 @@ footer ul.social > li:not(:first-child){
     }
     header #control a.btn{
         font-size: 11px;
+    }
+    header #nav-logo{
+        left: 100px;
     }
 }
