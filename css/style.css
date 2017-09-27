@@ -427,15 +427,27 @@ nav #nav-small-title{
 }
 
 #main-side-menu li > a{
-    color: rgba(0,0,0,0.70);
-
+    color: rgba(0,0,0,0.87);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-#main-side-menu li a:hover{
+#main-side-menu li > a i{
+    color: rgba(0,0,0,0.54);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+#main-side-menu li > a:hover, #main-side-menu li > a:hover i{
     background: none;
     color: #009688;
 }
-
 /* ====================================
     Footer
     =============================================*/
