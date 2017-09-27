@@ -84,12 +84,12 @@
          */
         function switchNavigationStyle(scroll){
 
-            if(header.hasClass('full-height')){
+            /*if(header.hasClass('full-height')){
                 navLogo.hide();
                 if(!header.children('div').hasClass('navbar-fixed')){
                     header.children('div').removeClass('navbar').addClass('navbar-fixed');
                 }
-            }
+            }*/
 
             if(header.hasClass('collapse')){
 
