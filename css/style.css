@@ -297,9 +297,6 @@ nav{
     height: 52px;
 }
 
-nav ul > li a{
-    text-transform: capitalize;
-}
 
 nav ul a.btn{
     margin: 0 0 0 20px;
@@ -780,8 +777,4 @@ a.btn-flat:hover{
 color: rgba(0, 0, 0, .54) !important;
 }
 
-
-nav ul > li a {
-    text-transform: none !important;
-}
 
