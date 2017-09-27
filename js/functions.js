@@ -36,17 +36,29 @@
         var navbar              = $('nav');
         var subSearch           = $('#sub-search');
         var dropdownControl     = $('.dropdown-button');
+        var navLogo             = $('#nav-logo');
         var to_top_offset       = 40;
 
-        /**
-         * let's ini side menu
-         */
-        buttonCollapse.sideNav();
+        _init_navigation();
 
         /**
-         * Load navigation style
+         * Let's init navigation system
+         * @private
          */
-        switchNavigationStyle($(this).scrollTop());
+        function _init_navigation(){
+
+            // side menu
+            buttonCollapse.sideNav();
+
+            // Load navigation style
+            switchNavigationStyle($(this).scrollTop());
+
+            // Dropdown
+            dropdownControl.dropdown({
+                constrainWidth: false,
+                belowOrigin: true
+            });
+        }
 
         /**
          * Go to anchor, he will be apply to all 'scroll-to" class
@@ -55,7 +67,7 @@
             event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: $( $(this).attr('href') ).offset().top - 70
-            }, 600)
+            }, 700)
         });
 
         /**
@@ -71,6 +83,14 @@
          * @param scroll
          */
         function switchNavigationStyle(scroll){
+
+            if(header.hasClass('full-height')){
+                navLogo.hide();
+                if(!header.children('div').hasClass('navbar-fixed')){
+                    header.children('div').removeClass('navbar').addClass('navbar-fixed');
+                }
+            }
+
             if(header.hasClass('collapse')){
 
             }else{
@@ -81,14 +101,6 @@
                 }
             }
         }
-
-        /**
-         * init Dropdown
-         */
-        dropdownControl.dropdown({
-            constrainWidth: false,
-            belowOrigin: true
-        });
 
         /**
          * Prevents search dropdown from disappearing
