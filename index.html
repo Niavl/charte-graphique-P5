@@ -56,7 +56,7 @@
             </div>
         </div>
         <ul id="main-side-menu">
-            <li><a id="scroll-top" href="#top"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a id="scroll-top" href="#"><i class="material-icons">home</i>Accueil</a></li>
             <li><a href="#couleurs" class="scroll-to"><i class="material-icons">palette</i>Les couleurs</a></li>
             <li><a href="#logo" class="scroll-to"><i class="material-icons">wb_sunny</i>Le logo</a></li>
             <li><a href="#usage" class="scroll-to"><i class="material-icons">view_carousel</i>Cas d'usage</a></li>
@@ -94,7 +94,7 @@
             <nav class="nav-extended" role="navigation">
                 <div class="nav-wrapper">
 
-                    <a href="#top" data-activates="side-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <a href="#" data-activates="side-menu" class="button-collapse"><i class="material-icons">menu</i></a>
 
                     <div id="nav-logo" class="brand-logo" style="margin-top: 10px;">
                         <img src="images/logo/nav-logo.png" alt="Petit logo nos amis les oiseaux" />
@@ -106,7 +106,7 @@
                         <li><a href="javascript:void(0)" class="dropdown-button" data-activates="dropdown-search"><i class="material-icons">search</i></a></li>
                     </ul>-->
                     <ul class="right hide-on-med-and-down" style="margin-right:16px;">
-                        <li class="active"><a id="scroll-top" href="#top">Accueil</a></li>
+                        <li class="active"><a id="scroll-top" href="#">Accueil</a></li>
                         <li><a href="#couleurs" class="scroll-to">Les couleurs</a></li>
                         <li><a href="#logo" class="scroll-to">Le logo</a></li>
                         <li><a href="#usage" class="scroll-to">Cas d'usage</a></li>
@@ -568,27 +568,19 @@
             <div class="row">
                 <div class="col s12">
                 	<h2>Quelques effets d'interaction</h2>
-                	<!--
-                    <div class="card">
-                        <div class="card-content">
-                        	<div class="col s12 m8 push-m2">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida, elit at placerat bibendum, risus neque volutpat purus,ut auctor quam neque vitae sapien.
-                                Pellentesque in quam velit. Pellentesque pretium mattis diam, molestie aliquam libero rutrum ut.Donec ac enim id lorem ultricies varius.
-                            </p>
-                            </div>
-                        </div>
-                    </div>
-					-->
-                            <div class="col s3">
+
+
+
+						<div class="row">
+                            <div class="col m6 l3 center-align">
                                 <P>Bouton d'action</P>
                                 <a class="waves-effect btn">Bouton</a>
                             </div>
-                            <div class="col s3">
+                            <div class="col m6 l3 center-align">
                                 <P>Bouton d'action</P>
                                 <a class="waves-effect white btn">Bouton</a>
                             </div>
-                            <div class="col s3">
+                            <div class="col m6 l3 center-align">
                                 <P>Bouton flottant</P>
                                 <a class="btn-floating btn-large waves-effect deep-orange accent-3"><i class="material-icons">add</i></a>
                             </div>
@@ -596,33 +588,38 @@
                                 <P>Bouton Flat</P>
                                 <a class="bleen" style="font-weight:500;">FLAT BUTTON</a>
                             </div>-->
-                            <div class="col s3">
+                            <div class="col m6 l3 center-align">
                                 <P>Bouton Flat</P>
-                                <a class="waves-effect waves-teal btn-flat">Bouton Flat</a>
+                                <a class="waves-effect waves-teal btn-flat" style="font-weight:500;">Bouton Flat</a>
                             </div>
-                            <div class="col s4">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col m6 l4 center-align">
                                 <P>Navigation de côté</P>
-                                <a href="#top" data-activates="side-menu" class="button-collapse waves-effect btn">Sidenav demo</a>
-                            </div>
-                            <div class="col s4">
-                                <P>Fenêtre modale</P>
-                                 <a class="waves-effect btn modal-trigger" href="#modal1">Modale demo</a>
+                                <a href="#" data-activates="side-menu" class="button-collapse waves-effect btn">Sidenav demo</a>
                             </div>
 
+                            <div class="col m6 l4 center-align">
+                                <P>Fenêtre modale</P>
+                                 <button class="btn waves-effect deep-orange accent-3 modal-trigger" data-target="modal1">Modale demo</button>
+                            </div>
+                        
 <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <div class="modal col l4 m6 s8 offset-l2" id="modal1">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4 style="font-size:20px; font-weight:500;">Titre du header</h4>
+      <p style="font-size:16px;">Un peu de texte</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="btn-flat modal-action modal-close waves-effect orange" style="font-weight:500;">Fermer la modale</a>
     </div>
   </div>
 
-                            <div class="col s4">
+                            <div class="col m12 l4">
                                 <P>Pagination</P>
-                            <ul class="pagination">
+                            <ul class="pagination center-align">
                                 <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                                 <li class="active"><a href="#!">1</a></li>
                                 <li class="waves-effect"><a href="#!">2</a></li>
@@ -633,8 +630,7 @@
                             </ul>
                             </div>
 
-
-
+                        </div>
 
         </section>
 
@@ -676,7 +672,7 @@
                 </div>
             </div>
         </div>
-        <div id="scroll-container" class="circle"><a id="scroll-top" href="#top"><i class="mdi mdi-arrow-up-thick"></i></a></div>
+        <div id="scroll-container" class="circle"><a id="scroll-top" href="#"><i class="mdi mdi-arrow-up-thick"></i></a></div>
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
@@ -700,24 +696,25 @@
         ga('send', 'pageview');
     </script>
 
-
-
-
-
-    <script>
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
-
-    </script>
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="js/functions.js?version=1"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script>
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .35, // Opacity of modal background
+
+      startingTop: '30%', // Starting top style attribute
+      endingTop: '5%', // Ending top style attribute
+      }
+
+  );
+
+</script>
+
   </body>
 </html>
