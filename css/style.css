@@ -133,6 +133,10 @@ a.orange:hover{
     color: #DD2C00;
 }
 
+.orange {
+    background-color: rgba(255,255,255,0) !important;
+}
+
 a.bleen{
     color: #009688 !important;
     -webkit-transition: all 0.4s ease;
@@ -720,4 +724,57 @@ a.breadcrumb{
     header #nav-logo{
         left: 100px;
     }
+}
+
+
+
+
+
+
+
+
+/* ====================================
+    PAGINATION
+    =============================================*/
+
+.pagination li.active {
+    background-color: #009688 !important;
+}
+ul:not(.browser-default) > li {
+    list-style-type: none;
+}
+.pagination li {
+    display: inline-block;
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: top;
+    height: 30px;
+}
+
+
+/* ====================================
+    BOUTON SIDENAV
+    =============================================*/
+
+.side-nav li > a.btn, .side-nav li > a.btn-large, .side-nav li > a.btn-large, .side-nav li > a.btn-floating {
+    color: #fff !important;
+}
+
+.side-nav li > a.btn:hover, .side-nav li > a.btn-large:hover, .side-nav li > a.btn-large:hover, .side-nav li > a.btn-floating:hover,
+.side-nav li > a.btn:active, .side-nav li > a.btn-large:active, .side-nav li > a.btn-large:active, .side-nav li > a.btn-floating:active,
+.side-nav li > a.btn:focus, .side-nav li > a.btn-large:focus, .side-nav li > a.btn-large:focus, .side-nav li > a.btn-floating:focus {
+    background-color: #FF6E40 !important;
+    color: #FFFFFF !important;
+}
+
+.side-nav li > a.btn:active, .side-nav li > a.btn-large:active, .side-nav li > a.btn-large:active, .side-nav li > a.btn-floating:active,
+.side-nav li > a.btn:focus, .side-nav li > a.btn-large:focus, .side-nav li > a.btn-large:focus, .side-nav li > a.btn-floating:focus {
+    background-color: #DD2C00 !important;
+}
+
+/* ====================================
+    BOUTON FLAT
+    =============================================*/
+a.btn-flat:hover{
+color: rgba(0, 0, 0, .54) !important;
 }
