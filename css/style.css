@@ -776,29 +776,4 @@ ul:not(.browser-default) > li {
 /* ====================================
     BOUTON FLAT
     =============================================*/
-a.btn-flat:hover{
-color: rgba(0, 0, 0, .54) !important;
-}
 
-
-
-
-
-/* ====================================
-    BACKGROUND DE LA MODALE
-    =============================================
-
-.lean-overlay {
-    position: fixed;
-    z-index: 999;
-    top: -100px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 125%;
-    width: 100%;
-    background: #000;
-    display: none;
-    will-change: opacity;
-    }
-    */
