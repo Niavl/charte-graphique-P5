@@ -38,7 +38,7 @@ img{
 }
 
 .logo-medium{
-    background: url('../images/logo/color-shadow.svg') center no-repeat;
+    background: url('../images/logo/logo-NAO-color-shadow-3.png') center no-repeat;
     width: 100%;
     min-height: 100px;
 }
@@ -485,9 +485,9 @@ footer #scroll-container i{
     font-size: 30px;
 }
 
-footer div.logo-medium{
-    width: 100%;
-    min-height: 100px;
+footer div.logo-medium {
+    background-size: 75%;
+    min-height: 150px;
     margin-top: 50px;
 }
 
