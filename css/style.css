@@ -783,10 +783,24 @@ ul:not(.browser-default) > li {
 }
 
 /* ====================================
-    BOUTON FLAT
+    DIVERS
     =============================================*/
 a.btn-flat:hover{
 color: rgba(0, 0, 0, .54) !important;
 }
 
 
+.toast{
+
+    background-color: #00675B ;
+    color: #fff;
+}
+
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: #FF6E40;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: #FF3D00;
+}
