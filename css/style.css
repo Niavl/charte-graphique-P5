@@ -10,8 +10,24 @@
 
 html, body{
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+}
+
+body{
     background: rgba(0, 150, 136,0.07);
+    color: rgba(0,0,0,0.87);
+}
+
+body:after{
+    background: rgba(0, 150, 136,0.07);
+}
+
+div.half{
+    width: 50%;
+}
+
+div.center{
+    margin: auto;
 }
 
 /* ====================================
@@ -25,7 +41,6 @@ h1{
 
 h2{
     font-size: 18px;
-    font-weight: 400;
 }
 
 h1.slogan{
@@ -37,8 +52,14 @@ img{
     max-width: 100%;
 }
 
+.caption{
+    font-size: 12px;
+}
+
 .logo-medium{
+    margin-top: 5px;
     background: url('../images/logo/logo-NAO-color-shadow-3.png') center no-repeat;
+    background-size: 100%;
     width: 100%;
     min-height: 100px;
 }
@@ -46,9 +67,28 @@ img{
 .no-pad-bot{
     margin-bottom: 0 !important;
 }
-
 .marge-top{
     margin-top: 40px;
+}
+
+/* ====================================
+    Text color
+    =============================================*/
+
+.light-1{
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.light-2{
+    color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.dark-1{
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.dark-2{
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* ====================================
@@ -133,10 +173,6 @@ a.orange:hover{
     color: #DD2C00;
 }
 
-.orange {
-    background-color: rgba(255,255,255,0) !important;
-}
-
 a.bleen{
     color: #009688 !important;
     -webkit-transition: all 0.4s ease;
@@ -151,22 +187,26 @@ a.bleen:hover{
 }
 
 /* ====================================
+    Form
+    =============================================*/
+[type="checkbox"]+label{
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* ====================================
     Heading
     =============================================*/
 header{
-    min-height: 40%;
+    min-height: 50%;
     width: 100%;
     background-size: cover;
-    -webkit-box-shadow : 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
 }
 
 header.bg1{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg1.jpg') center/cover no-repeat ;
-}
-
-header.bg2{
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg2.jpg') center/cover no-repeat;
 }
 
 header.bg2-blur{
@@ -202,7 +242,7 @@ header.bg9{
 }
 
 header.bg10{
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg10.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg10.jpg') center/cover no-repeat;
 }
 
 header.bg11{
@@ -218,7 +258,11 @@ header.bg13{
 }
 
 header.full-height{
-    min-height: 100vh;
+    min-height: 100%;
+}
+
+header.full-height #nav-logo{
+    display: none;
 }
 
 header section{
@@ -248,18 +292,20 @@ header #control li:first-child{
 }
 
 header #header-main-title{
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 
 header #header-main-title h1{
-    font-size: 30pt;
+    font-size: 30px;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 header #header-main-title h2{
-    font-size: 24pt;
+    font-size: 24px;
 }
+
 
 .sticky{
     background : #009688;
@@ -292,11 +338,11 @@ nav{
 
 #nav-logo{
     margin-top: 5px;
-    background: url('../images/logo/small-logo.png') center no-repeat;
-    width: 90px;
-    height: 52px;
+    background: url('../images/logo/white/nav-logo.png') center no-repeat;
+    background-size: 93px;
+    width: 93px;
+    height: 48px;
 }
-
 
 nav ul a.btn{
     margin: 0 0 0 20px;
@@ -317,7 +363,6 @@ nav .static-menu li a:hover{
     background: none;
     color : rgba(255, 255, 255, 0.85);
 }
-
 
 nav #nav-small-title{
     display: none;
@@ -342,7 +387,7 @@ nav #nav-small-title{
     background: none;
 }
 #dropdown-social{
-    width: 190px;
+    width: 145px;
     padding: 15px 5px 0 5px;
 }
 #dropdown-social li > a{
@@ -448,11 +493,13 @@ nav #nav-small-title{
     background: none;
     color: #009688;
 }
+
 /* ====================================
     Footer
     =============================================*/
 footer h2{
-    font-size: 1.2rem;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 100%;
     margin: 0 0 10px 0;
 }
@@ -485,7 +532,7 @@ footer #scroll-container i{
     font-size: 30px;
 }
 
-footer div.logo-medium {
+footer div.logo-medium{
     background-size: 75%;
     min-height: 150px;
     margin-top: 50px;
@@ -531,6 +578,7 @@ footer ul.social > li:not(:first-child){
 
 .card .card-title{
     font-size: 24px;
+    font-weight: normal;
 }
 
 .card .card-action{
@@ -539,7 +587,47 @@ footer ul.social > li:not(:first-child){
 }
 
 .card .card-action > a{
-    font-weight: 800;
+    font-weight: 400;
+}
+
+.card .card-content form{
+    padding: 5px 60px 5px 70px;
+    min-height: 150px;
+}
+
+.card .card-content form .main-section{
+    padding-right: 40px;
+}
+
+.card .card-content form .secondary-section{
+    padding-left: 90px;
+    height: 100%;
+    margin-top: 12%;
+}
+
+.card .card-content form .secondary-section:after {
+    background: rgba(0,0,0,0.54);
+    content: "";
+    display: block;
+    width: 1px;
+    left: 55%;
+    position: absolute;
+    top: 15%;
+    height: 75%;
+}
+
+.card .card-content form .input-field label {
+    color: rgba(0,0,0,0.54);
+}
+
+.card .card-content form .input-field input[type=text]:focus {
+    border-bottom: 1px solid #009688;
+    box-shadow: 0 1px 0 0 #009688;
+}
+
+.card .card-content form input[type="checkbox"].filled-in:checked+label:after{
+    border: 2px solid #FF3D00;
+    background-color: #FF3D00;
 }
 
 /* ====================================
@@ -551,7 +639,7 @@ footer ul.social > li:not(:first-child){
     width: 25%;
     position: relative;
     text-align: center;
-    color: #b7b7b7;
+    color: rgba(0,0,0,0.54);
 }
 
 #stepbar li:first-child:before {
@@ -603,6 +691,11 @@ footer ul.social > li:not(:first-child){
     position: relative;
     top: -20px;
 }
+
+.page-heading h1{
+    display: none;
+}
+
 a.breadcrumb{
     color: #009688;
     font-size: 12px;
@@ -615,6 +708,7 @@ a.breadcrumb{
     font-size: 12px;
     margin: 2px;
 }
+
 
 /* ====================================
     Responsive
@@ -641,12 +735,20 @@ a.breadcrumb{
         margin-bottom: 10px !important;
     }
 
+    footer h2{
+        font-size: 14px;
+    }
+
     #stay-connect form{
         padding-left: 30px;
     }
 
     header section img{
         width: 90%;
+    }
+
+    h2{
+        font-size: 16px;
     }
 
     h1.slogan{
@@ -657,18 +759,65 @@ a.breadcrumb{
     header #nav-logo{
         left: 60px;
     }
+
+    header #header-main-title{
+        margin-top: 20%;
+    }
+
+    header #header-main-title h1{
+        font-size: 20px;
+    }
+
+    header #header-main-title h2{
+        font-size: 16px;
+    }
+
+    main section .logo-medium{
+        min-height: 150px;
+    }
+
+    .card .card-title{
+        font-size: 22px;
+    }
+
+    .card .card-content form{
+        padding: 10px;
+        min-height: 150px;
+    }
+
+    .card .card-content form .main-section{
+        padding-right: 0;
+    }
+
+    .card .card-content form .secondary-section{
+        padding-left: 0px;
+        height: 100%;
+        margin-top: 5%;
+    }
+    .card .card-content form .secondary-section:after{
+        content: none;
+    }
 }
 
 /**
     Phone and small screen
  */
 @media all and (max-width: 600px){
+
+    footer h2{
+        font-size: 14px;
+    }
+
     .no-pad-bot{
         margin-bottom: 10px !important;
     }
 
     header section img{
         width: 90%;
+    }
+
+    h2{
+        font-size: 16px;
     }
 
     h1.slogan{
@@ -698,15 +847,41 @@ a.breadcrumb{
     }
 
     header #header-main-title h1{
-        font-size: 20pt;
+        font-size: 20px;
     }
 
     header #header-main-title h2{
-        font-size: 16pt;
+        font-size: 16px;
     }
 
     header #nav-logo{
         left: 100px;
+    }
+
+    header #header-main-title{
+        margin-top: 25%;
+    }
+
+    .card .card-title{
+        font-size: 22px;
+    }
+
+    .card .card-content form{
+        padding: 10px;
+        min-height: 150px;
+    }
+
+    .card .card-content form .main-section{
+        padding-right: 0;
+    }
+
+    .card .card-content form .secondary-section{
+        padding-left: 0px;
+        height: 100%;
+        margin-top: 5%;
+    }
+    .card .card-content form .secondary-section:after{
+        content: none;
     }
 }
 
@@ -735,6 +910,7 @@ a.breadcrumb{
         left: 100px;
     }
 }
+
 
 
 
@@ -803,4 +979,9 @@ color: rgba(0, 0, 0, .54) !important;
 
 .switch label input[type=checkbox]:checked+.lever:after {
   background-color: #FF3D00;
+}
+
+/*liens orange*/
+.orange {
+    background-color: rgba(255,255,255,0) !important;
 }
