@@ -211,6 +211,7 @@ header.bg1{
 
 header.bg2-blur{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(84,84,84,0)), url('../images/header/bg2-blur.jpg') center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 header.bg3{
